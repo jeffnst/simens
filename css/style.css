@@ -1,0 +1,86 @@
+div.ui-datepicker{
+ font-size:10px;
+}
+
+.site-title {
+    padding: 20px 80px 20px;
+    color:#fff;
+    font-size: 20px;
+    font-weight:bold;
+}
+
+.navbar{
+    background:#76c5f0;
+}
+
+.navbar-nav > li > a{
+    font-weight:bold;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #577570 !important;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #000 !important;
+}
+
+.nav-stacked > li > a{
+    font-weight:bold;
+}
+
+.nav-stacked > li > a {
+    color: #000 !important;
+}
+
+.nav-stacked > li > a:hover {
+    color: #3b7368 !important;
+}   
+
+.container table th {
+    padding:10px;
+    text-align: center;
+    color: #577570;
+}
+
+.container table td {
+    padding:10px;
+    text-align: center;
+}
+
+#left td {
+    text-align:left;
+}
+
+.dropdown ul.dropdown-menu{
+    border: 1px solid #76c5f0;
+}
+
+.data-diri {
+    float:left;
+}
+.dropdown-menu > li > a{
+    font-weight:bold;
+}
+
+.dropdown-menu > li > a {
+    color: #000 !important;
+}
+
+.dropdown-menu > li > a:hover {
+    color: #3b7368 !important;
+} 
+
+table {
+    border-color:#66c5c0;
+
+}
+
+th {
+    background:#76c5f0;
+    border-color:#66c5c0;
+}
+
+td {
+    border-color:#66c5c0;
+}
