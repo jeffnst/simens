@@ -2,7 +2,7 @@
 // koneksi ke database
 
 session_start();
-$base_url = "http://localhost/simens";
+$base_url = "http://92.222.71.15/simens";
 
 date_default_timezone_set("ASIA/MAKASSAR");
 
@@ -16,7 +16,7 @@ date_default_timezone_set("ASIA/MAKASSAR");
 //}
 
 
-$base_url = "http://localhost/simens";
+$base_url = "http://92.222.71.15/simens";
 function testdb_connect() {
 $dbh = new PDO("mysql:host=localhost;dbname=simpeg_bpkad", "root", "");
      return ($dbh);
