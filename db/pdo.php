@@ -18,7 +18,7 @@ date_default_timezone_set("ASIA/MAKASSAR");
 
 $base_url = "http://92.222.71.15/simens";
 function testdb_connect() {
-$dbh = new PDO("mysql:host=localhost;dbname=simpeg_bpkad", "root", "");
+$dbh = new PDO("mysql:host=localhost;dbname=simpeg_bpkad", "root", "slamdunk23");
      return ($dbh);
 }
 
