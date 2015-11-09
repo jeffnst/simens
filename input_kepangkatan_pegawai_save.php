@@ -2,10 +2,11 @@
 include "db/pdo.php";
 
 $nama_lengkap = $_POST['nama_lengkap'];
-$pangkat_gol = $_POST['pangkat_gol'];
+$jenis_pangkat = $_POST['jenis_pangkat'];
+$gol_ruang = $_POST['gol_ruang'];
 $tmt = $_POST['tmt'];
-$jenis = $_POST['jenis'];
-$keterangan = $_POST['keterangan'];
+$no_sk = $_POST['no_sk'];
+$tgl_sk = $_POST['tgl_sk'];
 $folder = "kepangkatan";
 
 //echo $nama_lengkap;
@@ -61,9 +62,9 @@ if ($uploadOk == 0) {
 }
 
 
-$input_kepangkatan = inputKepangkatan($nip_peg,$pangkat_gol,$tmt,$jenis,$keterangan,$target_file);
+$input_kepangkatan = inputKepangkatan($nip_peg,$jenis_pangkat,$gol_ruang,$tmt,$no_sk,$tgl_sk,$target_file);
 if(isset($input_kepangkatan)){
-    header("Location: $base_url/input_kepangkatan_pegawai.php?input=$nama_lengkap");
+    header("Location: $base_url/pegawai.php?search=$nama_lengkap");
 }
 
 

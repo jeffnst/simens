@@ -15,26 +15,26 @@ if(isset($_GET['edit'])){
     <label><span style="color: green;">Edit Diklat Struktural "<?php echo $_GET['edit']; ?>" Pegawai Telah Berhasil!!</span></label>
 <?php
 }
-$diklat_fungsionals = getDataDiklatStruktural($nip_peg,$id);
+$diklats = getDataDiklat($nip_peg,$id);
 //var_dump($diklat_fungsionals);
-foreach($diklat_fungsionals as $row):
+foreach($diklats as $row):
 ?> 
 <div>
-    <form action="edit_diklat_struktural_pegawai_save.php" method="POST"  enctype="multipart/form-data">
+    <form action="edit_diklat_pegawai_save.php" method="POST"  enctype="multipart/form-data">
     <input type="hidden" name="id" value="<?php echo $row['id']; ?>"/>
     <input type="hidden" name="nip_peg" value="<?php echo $row['nip_peg']; ?>"/>
     <div class="tbl-no-border data-diri">
     <table id="left" border="0">
 	<input type="hidden" name="id" value="<?php echo $row['id']; ?>"/>
     <tr>
+        <td><label>Jenis Diklat </label></td>
+        <td>:</td>
+        <td><input type="text" name="jenis_diklat" value="<?php echo $row['jenis_diklat']; ?>"/></td>
+    </tr>
+    <tr>
         <td><label>Nama Diklat </label></td>
         <td>:</td>
         <td><input type="text" name="nama_diklat" value="<?php echo $row['nama_diklat']; ?>"/></td>
-    </tr>
-    <tr>
-        <td><label>Tahun</label></td>
-        <td>:</td>
-        <td><input type="text" name="tahun" value="<?php echo $row['tahun']; ?>"/></td>
     </tr>
     <tr>
         <td><label>Tempat</label></td>
@@ -42,11 +42,11 @@ foreach($diklat_fungsionals as $row):
         <td><input type="text" name="tempat" value="<?php echo $row['tempat']; ?>"/></td>
     </tr>
     <tr>
-        <td><label>Keterangan</label></td>
+        <td><label>Tahun</label></td>
         <td>:</td>
-        <td><input type="text" name="keterangan" value="<?php echo $row['keterangan']; ?>"/></td>
+        <td><input type="text" name="tahun" value="<?php echo $row['tahun']; ?>"/></td>
     </tr>
-    <input type="hidden" name="path_diklat_struktural" value="<?php echo $row['path_diklat_struktural']; ?>"/>
+    <input type="hidden" name="path_diklat" value="<?php echo $row['path_diklat']; ?>"/>
     <tr>
         <td><label>Ganti Foto??</label><br /><label>Select image to upload:</label></td>
         <td>:</td>

@@ -36,19 +36,19 @@ if(isset($_GET['input'])){
         </td>
     </tr>
     <tr>
-        <td><label>Tingkat Pendidikan </label></td>
+        <td><label>Jenjang Pendidikan </label></td>
         <td>:</td>
-        <td><input type="text" name="tingkat_pendidikan"/></td>
+        <td><input type="text" name="jenjang_pendidikan"/></td>
     </tr>
     <tr>
-        <td><label>Nama Pendidikan</label></td>
+        <td><label>Nama Sekolah</label></td>
         <td>:</td>
-        <td><input type="text" name="nama_pendidikan"/></td>
+        <td><input type="text" name="nama_sekolah"/></td>
     </tr>
     <tr>
-        <td><label>Kualifikasi</label></td>
+        <td><label>Nomor Ijazah</label></td>
         <td>:</td>
-        <td><input type="text" name="kualifikasi"/></td>
+        <td><input type="text" name="no_ijazah"/></td>
     </tr>
     <tr>
         <td><label>Tahun Lulus</label></td>

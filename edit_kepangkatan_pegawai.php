@@ -3,6 +3,20 @@
 ?>
 <?php include "sidebar.php"; ?>
 <div class="col-md-9">
+<script>
+    $(function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      dateFormat: "yy-mm-dd"
+    });
+    $( "#datepicker2" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      dateFormat: "yy-mm-dd"
+    });
+  });
+  </script>
 <h3>Edit Kepangkatan Pegawai</h3>
 <?php
 $pegawais = getNamaPegawai();
@@ -27,9 +41,14 @@ foreach($jabatans as $row):
     <table id="left" border="0">
 	<input type="hidden" name="id" value="<?php echo $row['id']; ?>"/>
     <tr>
-        <td><label>Pangkat/Gol.Ruang</label></td>
+        <td><label>Jenis Pangkat</label></td>
         <td>:</td>
-        <td><input type="text" name="pangkat_gol" value="<?php echo $row['pangkat_gol']; ?>"/></td>
+        <td><input type="text" name="jenis_pangkat" value="<?php echo $row['jenis_pangkat']; ?>"/></td>
+    </tr>
+    <tr>
+        <td><label>Gol.Ruang</label></td>
+        <td>:</td>
+        <td><input type="text" name="gol_ruang" value="<?php echo $row['gol_ruang']; ?>"/></td>
     </tr>
     <tr>
         <td><label>TMT</label></td>
@@ -37,14 +56,14 @@ foreach($jabatans as $row):
         <td><input type="text" name="tmt" value="<?php echo $row['tmt']; ?>"/></td>
     </tr>
     <tr>
-        <td><label>Jenis</label></td>
+        <td><label>No. SK</label></td>
         <td>:</td>
-        <td><input type="text" name="jenis" value="<?php echo $row['jenis']; ?>"/></td>
+        <td><input type="text" name="no_sk" value="<?php echo $row['no_sk']; ?>"/></td>
     </tr>
     <tr>
-        <td><label>Keterangan</label></td>
+        <td><label>Tanggal SK</label></td>
         <td>:</td>
-        <td><input type="text" name="keterangan" value="<?php echo $row['keterangan']; ?>"/></td>
+        <td><input type="text" name="tgl_sk" id="datepicker" value="<?php echo $row['tgl_sk']; ?>"/></td>
     </tr>
     <input type="hidden" name="path_kepangkatan" value="<?php echo $row['path_kepangkatan']; ?>"/>
     <tr>

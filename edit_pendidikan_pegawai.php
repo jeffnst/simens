@@ -15,9 +15,9 @@ if(isset($_GET['edit'])){
     <label><span style="color: green;">Edit Pelatihan Pegawai Telah Berhasil!!</span></label>
 <?php
 }
-$jabatans = getDataPendidikan($nip_peg,$id);
+$pendidikans = getDataPendidikan($nip_peg,$id);
 //var_dump($diklat_fungsionals);
-foreach($jabatans as $row):
+foreach($pendidikans as $row):
 ?>  
 <div>
     <form action="edit_pendidikan_pegawai_save.php" method="POST"  enctype="multipart/form-data">
@@ -28,19 +28,19 @@ foreach($jabatans as $row):
     <table id="left" border="0">
 	<input type="hidden" name="id" value="<?php echo $row['id']; ?>"/>
     <tr>
-        <td><label>Tingkat Pendidikan </label></td>
+        <td><label>Jenjang Pendidikan </label></td>
         <td>:</td>
-        <td><input type="text" name="tingkat_pendidikan" value="<?php echo $row['tingkat_pendidikan']; ?>"/></td>
+        <td><input type="text" name="jenjang_pendidikan" value="<?php echo $row['jenjang_pendidikan']; ?>"/></td>
     </tr>
     <tr>
-        <td><label>Nama Pendidikan</label></td>
+        <td><label>Nama Sekolah</label></td>
         <td>:</td>
-        <td><input type="text" name="nama_pendidikan" value="<?php echo $row['nama_pendidikan']; ?>"/></td>
+        <td><input type="text" name="nama_sekolah" value="<?php echo $row['nama_sekolah']; ?>"/></td>
     </tr>
     <tr>
-        <td><label>Kualifikasi</label></td>
+        <td><label>Nomor Ijazah</label></td>
         <td>:</td>
-        <td><input type="text" name="kualifikasi" value="<?php echo $row['kualifikasi']; ?>"/></td>
+        <td><input type="text" name="no_ijazah" value="<?php echo $row['no_ijazah']; ?>"/></td>
     </tr>
     <tr>
         <td><label>Tahun Lulus</label></td>

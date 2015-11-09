@@ -16,7 +16,7 @@ if(isset($_GET['input'])){
 
 ?> 
 <div>
-    <form action="input_diklat_struktural_pegawai_save.php" method="POST"  enctype="multipart/form-data">
+    <form action="input_diklat_pegawai_save.php" method="POST"  enctype="multipart/form-data">
     <div class="tbl-no-border data-diri">
     <table id="left" border="0">
     <tr>
@@ -36,14 +36,14 @@ if(isset($_GET['input'])){
         </td>
     </tr>
     <tr>
+        <td><label>Jenis Diklat </label></td>
+        <td>:</td>
+        <td><input type="text" name="jenis_diklat"/></td>
+    </tr>
+    <tr>
         <td><label>Nama Diklat </label></td>
         <td>:</td>
         <td><input type="text" name="nama_diklat"/></td>
-    </tr>
-    <tr>
-        <td><label>Tahun</label></td>
-        <td>:</td>
-        <td><input type="text" name="tahun"/></td>
     </tr>
     <tr>
         <td><label>Tempat</label></td>
@@ -51,9 +51,9 @@ if(isset($_GET['input'])){
         <td><input type="text" name="tempat"/></td>
     </tr>
     <tr>
-        <td><label>Keterangan</label></td>
+        <td><label>Tahun</label></td>
         <td>:</td>
-        <td><input type="text" name="keterangan"/></td>
+        <td><input type="text" name="tahun"/></td>
     </tr>
     <tr>
         <td><label>Select image to upload:</label></td>

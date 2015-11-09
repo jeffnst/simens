@@ -3,6 +3,20 @@
 ?>
 <?php include "sidebar.php"; ?>
 <div class="col-md-9">
+  <script>
+    $(function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      dateFormat: "yy-mm-dd"
+    });
+    $( "#datepicker2" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      dateFormat: "yy-mm-dd"
+    });
+  });
+  </script>
 <h3>Edit Jabatan Pegawai</h3>
 <?php
 $pegawais = getNamaPegawai();
@@ -27,29 +41,24 @@ foreach($jabatans as $row):
     <table id="left" border="0">
 	<input type="hidden" name="id" value="<?php echo $row['id']; ?>"/>
     <tr>
-        <td><label>Jabatan</label></td>
+        <td><label>Nomor SK</label></td>
         <td>:</td>
-        <td><input type="text" name="jabatan" value="<?php echo $row['jabatan']; ?>"/></td>
+        <td><input type="text" name="no_sk" value="<?php echo $row['no_sk']; ?>"/></td>
     </tr>
     <tr>
-        <td><label>TMT</label></td>
+        <td><label>Tanggal SK</label></td>
         <td>:</td>
-        <td><input type="text" name="tmt" value="<?php echo $row['tmt']; ?>"/></td>
+        <td><input type="text" name="tgl_sk" id="datepicker" value="<?php echo $row['tgl_sk']; ?>"/></td>
     </tr>
     <tr>
-        <td><label>Golongan</label></td>
+        <td><label>Nama Jabatan</label></td>
         <td>:</td>
-        <td><input type="text" name="golongan" value="<?php echo $row['golongan']; ?>"/></td>
+        <td><input type="text" name="nama_jabatan" value="<?php echo $row['nama_jabatan']; ?>"/></td>
     </tr>
     <tr>
-        <td><label>Eselon</label></td>
+        <td><label>Unit Kerja</label></td>
         <td>:</td>
-        <td><input type="text" name="eselon" value="<?php echo $row['eselon']; ?>"/></td>
-    </tr>
-    <tr>
-        <td><label>Keterangan</label></td>
-        <td>:</td>
-        <td><input type="text" name="keterangan" value="<?php echo $row['keterangan']; ?>"/></td>
+        <td><input type="text" name="unit_kerja" value="<?php echo $row['unit_kerja']; ?>"/></td>
     </tr>
     <input type="hidden" name="path_jabatan" value="<?php echo $row['path_jabatan']; ?>"/>
     <tr>

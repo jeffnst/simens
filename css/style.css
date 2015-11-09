@@ -1,3 +1,19 @@
+body {
+    background: #FFFF00;
+}
+
+.navbar .container {
+    background: #76c5f0;
+}
+.container {
+    background: #fff;
+    margin-top: -20px;
+}
+
+.row {
+    min-height: 500px;
+}
+
 div.ui-datepicker{
  font-size:10px;
 }
@@ -7,6 +23,7 @@ div.ui-datepicker{
     color:#fff;
     font-size: 20px;
     font-weight:bold;
+    text-align: center;
 }
 
 .navbar{
@@ -58,6 +75,7 @@ div.ui-datepicker{
 
 .data-diri {
     float:left;
+    margin-right: 50px;
 }
 .dropdown-menu > li > a{
     font-weight:bold;
@@ -84,3 +102,18 @@ th {
 td {
     border-color:#66c5c0;
 }
+
+.login-form table td {
+    font-size: 10px;
+    padding: 2px 10px 2px;
+}
+
+.search-form table td {
+    font-size: 10px;
+    padding: 2px 10px 2px;
+}
+
+.search-form table {
+    margin-bottom: 20px;
+}
+

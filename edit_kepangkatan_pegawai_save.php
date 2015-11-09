@@ -3,10 +3,11 @@ include "db/pdo.php";
 
 $id = $_POST['id'];
 $nip_peg = $_POST['nip_peg'];
-$pangkat_gol = $_POST['pangkat_gol'];
+$jenis_pangkat = $_POST['jenis_pangkat'];
+$gol_ruang = $_POST['gol_ruang'];
 $tmt = $_POST['tmt'];
-$jenis = $_POST['jenis'];
-$keterangan = $_POST['keterangan'];
+$no_sk = $_POST['no_sk'];
+$tgl_sk = $_POST['tgl_sk'];
 $path_kepangkatan = $_POST['path_kepangkatan'];
 $folder = "kepangkatan";
 
@@ -25,7 +26,7 @@ if($file_name==""){
     //echo $keterangan;
     //echo $path_jabatan;
     
-    $edit_kepangkatan = editKepangkatan($id,$nip_peg,$pangkat_gol,$tmt,$jenis,$keterangan,$path_kepangkatan);
+    $edit_kepangkatan = editKepangkatan($id,$nip_peg,$jenis_pangkat,$gol_ruang,$tmt,$no_sk,$tgl_sk,$path_kepangkatan);
 
 } else {
 //    echo $id;
@@ -83,12 +84,12 @@ if($file_name==""){
     }
     //echo $target_file;
 
-      $edit_kepangkatan = editKepangkatan($id,$nip_peg,$pangkat_gol,$tmt,$jenis,$keterangan,$target_file);
+      $edit_kepangkatan = editKepangkatan($id,$nip_peg,$jenis_pangkat,$gol_ruang,$tmt,$no_sk,$tgl_sk,$target_file);
 
 }
 
 if(isset($edit_kepangkatan)){
     //header("Location: $base_url/edit_kepangkatan_pegawai.php?nip_peg=$nip_peg&id=$id&edit=true");
-     header("Location: $base_url/pegawai.php?nip_peg=$nip_peg");
+     header("Location: $base_url/pegawai.php?search=$nip_peg");
 }
 ?>

@@ -3,12 +3,13 @@ include "db/pdo.php";
 
 $id = $_POST['id'];
 $nip_peg = $_POST['nip_peg'];
+$jenis_diklat = $_POST['jenis_diklat'];
 $nama_diklat = $_POST['nama_diklat'];
-$tahun = $_POST['tahun'];
 $tempat = $_POST['tempat'];
+$tahun = $_POST['tahun'];
 $keterangan = $_POST['keterangan'];
-$path_diklat_fungsional = $_POST['path_diklat_fungsional'];
-$folder = "diklat_fungsional";
+$path_diklat = $_POST['path_diklat'];
+$folder = "diklat";
 
 
 $target_dir = "upload/$nip_peg/$folder/";
@@ -24,7 +25,7 @@ if($file_name==""){
     //echo $keterangan;
     //echo $path_diklat_fungsional;
     
-    $edit_diklat_fungsional = editDiklatFungsional($id,$nip_peg,$nama_diklat,$tahun,$tempat,$keterangan,$path_diklat_fungsional);
+    $edit_diklat = editDiklat($id,$nip_peg,$jenis_diklat,$nama_diklat,$tempat,$tahun,$path_diklat);
 
 } else {
 //    echo $id;
@@ -77,17 +78,17 @@ if($file_name==""){
         }
     }
     
-    if($path_diklat_fungsional != ""){
-        $delete_previous_file = unlink($path_diklat_fungsional);
+    if($path_diklat != ""){
+        $delete_previous_file = unlink($path_diklat);
     }
     
 
-    $edit_diklat_fungsional = editDiklatFungsional($id,$nip_peg,$nama_diklat,$tahun,$tempat,$keterangan,$target_file);
+    $edit_diklat = editDiklat($id,$nip_peg,$jenis_diklat,$nama_diklat,$tempat,$tahun,$target_file);
 
 }
 
-if(isset($edit_diklat_fungsional)){
-    //header("Location: $base_url/edit_diklat_fungsional_pegawai.php?nip_peg=$nip_peg&id=$id&edit=$nama_diklat");
-    header("Location: $base_url/pegawai.php?nip_peg=$nip_peg");
+if(isset($edit_diklat)){
+    //header("Location: $base_url/edit_diklat_struktural_pegawai.php?nip_peg=$nip_peg&id=$id&edit=$nama_diklat");
+     header("Location: $base_url/pegawai.php?search=$nip_peg");
 }
 ?>

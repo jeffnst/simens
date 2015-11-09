@@ -2,16 +2,14 @@
 include "db/pdo.php";
 
 $nama_lengkap = $_POST['nama_lengkap'];
-$nama_diklat = $_POST['nama_diklat'];
-$tahun = $_POST['tahun'];
-$tempat = $_POST['tempat'];
-$keterangan = $_POST['keterangan'];
-$folder = "diklat_fungsional";
+$jenis_dokumen = $_POST['jenis_dokumen'];
+$folder = "dokumen";
 
 //echo $nama_lengkap;
-//echo $nama_diklat;
-//echo $tahun;
-//echo $tempat;
+//echo $jabatan;
+//echo $tmt;
+//echo $golongan;
+//echo $eselon;
 //echo $keterangan;
 
 $nip_pegs = getIdPegawaiByName($nama_lengkap);
@@ -61,10 +59,10 @@ if ($uploadOk == 0) {
 }
 
 
-$input_diklat_fungsional = inputDiklatFungsional($nip_peg,$nama_diklat,$tahun,$tempat,$keterangan,$target_file);
+$input_dokumen = inputDokumen($nip_peg,$jenis_dokumen,$target_file);
 
-if(isset($input_diklat_fungsional)){
-    header("Location: $base_url/input_diklat_fungsional_pegawai.php?input=$nama_diklat&nama=$nama_lengkap");
+if(isset($input_dokumen)){
+    header("Location: $base_url/pegawai.php?search=$nama_lengkap");
 }
 
 ?>

@@ -3,11 +3,10 @@ include "db/pdo.php";
 
 $id = $_POST['id'];
 $nip_peg = $_POST['nip_peg'];
-$jabatan = $_POST['jabatan'];
-$tmt = $_POST['tmt'];
-$golongan = $_POST['golongan'];
-$eselon = $_POST['eselon'];
-$keterangan= $_POST['keterangan'];
+$no_sk = $_POST['no_sk'];
+$tgl_sk = $_POST['tgl_sk'];
+$nama_jabatan= $_POST['nama_jabatan'];
+$unit_kerja= $_POST['unit_kerja'];
 $path_jabatan = $_POST['path_jabatan'];
 $folder = "jabatan";
 
@@ -25,7 +24,7 @@ if($file_name==""){
     //echo $keterangan;
     //echo $path_jabatan;
     
-    $edit_jabatan = editJabatan($id,$nip_peg,$jabatan,$tmt,$golongan,$eselon,$keterangan,$path_jabatan);
+    $edit_jabatan = editJabatan($id,$nip_peg,$no_sk,$tgl_sk,$nama_jabatan,$unit_kerja,$path_jabatan);
 
 } else {
 //    echo $id;
@@ -83,13 +82,13 @@ if($file_name==""){
     }
     
 
-      $edit_jabatan = editJabatan($id,$nip_peg,$jabatan,$tmt,$golongan,$eselon,$keterangan,$target_file);
+      $edit_jabatan = editJabatan($id,$nip_peg,$no_sk,$tgl_sk,$nama_jabatan,$unit_kerja,$target_file);
 
 }
 
 if(isset($edit_jabatan)){
     //header("Location: $base_url/edit_jabatan_pegawai.php?nip_peg=$nip_peg&id=$id&edit=true");
-     header("Location: $base_url/pegawai.php?nip_peg=$nip_peg");
+     header("Location: $base_url/pegawai.php?search=$nip_peg");
 }
 
 ?>

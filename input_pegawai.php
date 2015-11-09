@@ -82,6 +82,21 @@ if(isset($_GET['input'])){
         <td><input type="text" name="alamat"/></td>
     </tr>
     <tr>
+        <td><label>Nomor Karpeg</label></td>
+        <td>:</td>
+        <td><input type="text" name="no_karpeg"/></td>
+    </tr>
+    <tr>
+        <td><label>Nomor NPWP</label></td>
+        <td>:</td>
+        <td><input type="text" name="no_npwp"/></td>
+    </tr>
+    <tr>
+        <td><label>Nomor Askes</label></td>
+        <td>:</td>
+        <td><input type="text" name="no_askes"/></td>
+    </tr>
+    <tr>
         <td><label>Select image to upload:</label></td>
         <td>:</td>
         <td><input type="file" name="fileToUpload" id="fileToUpload"></td>

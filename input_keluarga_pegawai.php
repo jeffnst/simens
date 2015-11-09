@@ -60,39 +60,35 @@ if(isset($_GET['input'])){
     <tr>
         <td><label>Tempat Lahir</label></td>
         <td>:</td>
-        <td><input type="text" name="tmpt_lahir_keluarga"/></td>
+        <td><input type="text" name="tmpt_lahir"/></td>
     </tr>
     <tr>
         <td><label>Tanggal Lahir</label></td>
         <td>:</td>
-        <td><input type="text" name="tgl_lahir_keluarga" id="datepicker"/></td>
+        <td><input type="text" name="tgl_lahir" id="datepicker"/></td>
     </tr>
     <tr>
         <td><label>Jenis Kelamin</label></td>
         <td>:</td>
-        <td><input type="radio" name="jenis_kelamin_keluarga" value="laki-laki"> Laki-laki <input type="radio" name="jenis_kelamin_keluarga" value="perempuan"> Perempuan</td>
+        <td><input type="radio" name="jenis_kelamin" value="laki-laki"> Laki-laki <input type="radio" name="jenis_kelamin" value="perempuan"> Perempuan</td>
     </tr>
     <tr>
         <td><label>Status Keluarga</label></td>
         <td>:</td>
         <td>
-            <select name="status_keluarga">
-                <option value="suami">Suami</option>
-                <option value="istri">Istri</option>
-                <option value="anak">Anak</option>
+            <select name="status">
+                <option value=""></option>
+                <option value="Orang Tua">Orang Tua</option>
+                <option value="Suami">Suami</option>
+                <option value="Istri">Istri</option>
+                <option value="Anak">Anak</option>
             </select>
         </td>
     </tr>
     <tr>
-        <td><label>Pekerjaan</label></td>
-        <td>:</td>
-        <td><input type="text" name="pekerjaan_keluarga"/></td>
-    </tr>
-    <input type="hidden" name="path_jabatan"/>
-    <tr>
         <td><label>Keterangan</label></td>
         <td>:</td>
-        <td><input type="text" name="keterangan_keluarga"/></td>
+        <td><input type="text" name="keterangan"/></td>
     </tr>
         <tr>
         <td colspan="3"><input type="submit" value="Input" name="submit" /></td>

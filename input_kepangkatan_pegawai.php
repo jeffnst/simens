@@ -2,6 +2,15 @@
 	include "header.php";
 ?>
 <?php include "sidebar.php"; ?>
+  <script>
+    $(function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      dateFormat: "yy-mm-dd"
+    });
+  });
+  </script>
 <div class="col-md-9">
 <h3>Input Kepangkatan Pegawai</h3>
 <?php
@@ -36,9 +45,14 @@ if(isset($_GET['input'])){
         </td>
     </tr>
     <tr>
-        <td><label>Pangkat/Gol.Ruang</label></td>
+        <td><label>Jenis Pangkat</label></td>
         <td>:</td>
-        <td><input type="text" name="pangkat_gol"/></td>
+        <td><input type="text" name="jenis_pangkat"/></td>
+    </tr>
+    <tr>
+        <td><label>Gol.Ruang</label></td>
+        <td>:</td>
+        <td><input type="text" name="gol_ruang"/></td>
     </tr>
     <tr>
         <td><label>TMT</label></td>
@@ -46,16 +60,15 @@ if(isset($_GET['input'])){
         <td><input type="text" name="tmt"/></td>
     </tr>
     <tr>
-        <td><label>Jenis</label></td>
+        <td><label>No. SK</label></td>
         <td>:</td>
-        <td><input type="text" name="jenis"/></td>
+        <td><input type="text" name="no_sk"/></td>
     </tr>
     <tr>
-        <td><label>Keterangan</label></td>
+        <td><label>Tanggal SK</label></td>
         <td>:</td>
-        <td><input type="text" name="keterangan"/></td>
+        <td><input type="text" name="tgl_sk" id="datepicker"/></td>
     </tr>
-    <input type="hidden" name="path_kepangkatan"/>
     <tr>
         <td><label>Select image to upload:</label></td>
         <td>:</td>

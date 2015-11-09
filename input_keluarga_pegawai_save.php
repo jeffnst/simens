@@ -3,18 +3,24 @@ include "db/pdo.php";
 
 $nama_lengkap = $_POST['nama_lengkap'];
 $nama_lengkap_keluarga = $_POST['nama_lengkap_keluarga'];
-$tmpt_lahir_keluarga = $_POST['tmpt_lahir_keluarga'];
-$tgl_lahir_keluarga = $_POST['tgl_lahir_keluarga'];
-$jenis_kelamin_keluarga = $_POST['jenis_kelamin_keluarga'];
-$status_keluarga = $_POST['status_keluarga'];
-$pekerjaan_keluarga = $_POST['pekerjaan_keluarga'];
-$keterangan_keluarga = $_POST['keterangan_keluarga'];
+$tmpt_lahir = $_POST['tmpt_lahir'];
+$tgl_lahir = $_POST['tgl_lahir'];
+$jenis_kelamin = $_POST['jenis_kelamin'];
+$status = $_POST['status'];
+$keterangan = $_POST['keterangan'];
 
+//echo $nama_lengkap;
+//echo $nama_lengkap_keluarga;
+//echo $tmpt_lahir;
+//echo $tgl_lahir;
+//echo $jenis_kelamin;
+//echo $status;
+//echo $keterangan;
 
 
 $nip_pegs = getIdPegawaiByName($nama_lengkap);
 $nip_peg = $nip_pegs[0]['nip_peg'];
-
+//echo $nip_peg;
 if($nip_peg!=""){
     //echo $nip_peg;
     //echo $nama_lengkap; 
@@ -27,7 +33,7 @@ if($nip_peg!=""){
         //echo $status_keluarga;
         //echo $pekerjaan_keluarga;
         //echo $keterangan_keluarga;
-        $input_keluarga_pagawai = inputKeluargaPegawai($nip_peg,$nama_lengkap_keluarga,$tmpt_lahir_keluarga,$tgl_lahir_keluarga,$jenis_kelamin_keluarga,$status_keluarga,$pekerjaan_keluarga,$keterangan_keluarga);    
+        $input_keluarga_pagawai = inputKeluargaPegawai($nip_peg,$status,$nama_lengkap_keluarga,$tgl_lahir,$tmpt_lahir,$jenis_kelamin,$keterangan);    
     }
 //    $jumlah_anak = $_POST['jumlah_anak'];
     //echo $jumlah_anak;
@@ -56,7 +62,7 @@ if($nip_peg!=""){
 }
 
 if(isset($input_keluarga_pagawai)){
-    header("Location: $base_url/input_keluarga_pegawai.php?input=$nama_lengkap");
+    header("Location: $base_url/pegawai.php?search=$nama_lengkap");
 }
 
 ?>

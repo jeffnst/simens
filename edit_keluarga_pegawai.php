@@ -43,44 +43,40 @@ foreach($keluargas as $row):
     <tr>
         <td><label>Nama Lengkap keluarga</label></td>
         <td>:</td>
-        <td><input type="text" name="nama_lengkap_keluarga" value="<?php echo $row['nama_lengkap']; ?>"/></td>
+        <td><input type="text" name="nama_lengkap" value="<?php echo $row['nama_lengkap']; ?>"/></td>
     </tr>
     <tr>
         <td><label>Tempat Lahir</label></td>
         <td>:</td>
-        <td><input type="text" name="tmpt_lahir_keluarga" value="<?php echo $row['tmpt_lahir']; ?>"/></td>
+        <td><input type="text" name="tmpt_lahir" value="<?php echo $row['tmpt_lahir']; ?>"/></td>
     </tr>
     <tr>
         <td><label>Tanggal Lahir</label></td>
         <td>:</td>
-        <td><input type="text" name="tgl_lahir_keluarga" id="datepicker" value="<?php echo $row['tgl_lahir']; ?>"/></td>
+        <td><input type="text" name="tgl_lahir" id="datepicker" value="<?php echo $row['tgl_lahir']; ?>"/></td>
     </tr>
     <tr>
         <td><label>Jenis Kelamin</label></td>
         <td>:</td>
-        <td><input type="radio" name="jenis_kelamin_keluarga" value="laki-laki" <?php if($row['jenis_kelamin']=="laki-laki"){echo "checked";} ?>> Laki-laki <input type="radio" name="jenis_kelamin_keluarga" value="perempuan" <?php if($row['jenis_kelamin']=="perempuan"){echo "checked";} ?>> Perempuan</td>
+        <td><input type="radio" name="jenis_kelamin" value="laki-laki" <?php if($row['jenis_kelamin']=="laki-laki"){echo "checked";} ?>> Laki-laki <input type="radio" name="jenis_kelamin" value="perempuan" <?php if($row['jenis_kelamin']=="perempuan"){echo "checked";} ?>> Perempuan</td>
     </tr>
     <tr>
         <td><label>Status Keluarga</label></td>
         <td>:</td>
         <td>
-            <select name="status_keluarga">
-                <option value="suami" <?php if($row['status']=="suami"){echo "selected";} ?>>Suami</option>
-                <option value="istri" <?php if($row['status']=="istri"){echo "selected";} ?>>Istri</option>
-                <option value="anak" <?php if($row['status']=="anak"){echo "selected";} ?>>Anak</option>
+            <select name="status">
+                <option value=""></option>
+                <option value="Orang Tua" <?php if($row['status']=="Orang Tua"){echo "selected";} ?>>Orang Tua</option>
+                <option value="Suami" <?php if($row['status']=="Suami"){echo "selected";} ?>>Suami</option>
+                <option value="Istri" <?php if($row['status']=="Istri"){echo "selected";} ?>>Istri</option>
+                <option value="Anak" <?php if($row['status']=="Anak"){echo "selected";} ?>>Anak</option>
             </select>
         </td>
     </tr>
     <tr>
-        <td><label>Pekerjaan</label></td>
-        <td>:</td>
-        <td><input type="text" name="pekerjaan_keluarga" value="<?php echo $row['pekerjaan']; ?>"/></td>
-    </tr>
-    <input type="hidden" name="path_jabatan" value="<?php echo $row['path_jabatan']; ?>"/>
-    <tr>
         <td><label>Keterangan</label></td>
         <td>:</td>
-        <td><input type="text" name="keterangan_keluarga" value="<?php echo $row['keterangan']; ?>"/></td>
+        <td><input type="text" name="keterangan" value="<?php echo $row['keterangan']; ?>"/></td>
     </tr>
         <tr>
         <td colspan="3"><input type="submit" value="Input" name="submit" /></td>

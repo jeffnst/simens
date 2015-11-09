@@ -2,11 +2,10 @@
 include "db/pdo.php";
 
 $nama_lengkap = $_POST['nama_lengkap'];
-$jabatan = $_POST['jabatan'];
-$tmt = $_POST['tmt'];
-$golongan = $_POST['golongan'];
-$eselon = $_POST['eselon'];
-$keterangan= $_POST['keterangan'];
+$no_sk = $_POST['no_sk'];
+$tgl_sk = $_POST['tgl_sk'];
+$nama_jabatan = $_POST['nama_jabatan'];
+$unit_kerja = $_POST['unit_kerja'];
 $folder = "jabatan";
 
 //echo $nama_lengkap;
@@ -63,10 +62,10 @@ if ($uploadOk == 0) {
 }
 
 
-$input_jabatan = inputJabatan($nip_peg,$jabatan,$tmt,$golongan,$eselon,$keterangan,$target_file);
+$input_jabatan = inputJabatan($nip_peg,$no_sk,$tgl_sk,$nama_jabatan,$unit_kerja,$target_file);
 
 if(isset($input_jabatan)){
-    header("Location: $base_url/input_jabatan_pegawai.php?input=$nama_lengkap");
+    header("Location: $base_url/pegawai.php?search=$nama_lengkap");
 }
 
 ?>

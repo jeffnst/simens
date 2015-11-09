@@ -12,21 +12,17 @@ $agama = $_POST['agama'];
 $stts_nikah = $_POST['stts_nikah'];
 $tgl_nikah = $_POST['tgl_nikah'];
 $alamat = $_POST['alamat'];
+$no_karpeg = $_POST['no_karpeg'];
+$no_npwp = $_POST['no_npwp'];
+$no_askes = $_POST['no_askes'];
 
-$diklat_fungsional = $_POST['diklat_fungsional'];
-$diklat_struktural = $_POST['diklat_struktural'];
-$pelatihan = $_POST['pelatihan'];
-$pendidikan = $_POST['pendidikan'];
-$jabatan = $_POST['jabatan'];
-$kepangkatan = $_POST['kepangkatan'];
 
 if (isset($nip_peg)){
-    $create_folder = mkdir("upload/".$nip_peg.'/'.$diklat_struktural, 0777, true);
-    $create_folder = mkdir("upload/".$nip_peg.'/'.$diklat_fungsional, 0777, true);
-    $create_folder = mkdir("upload/".$nip_peg.'/'.$pelatihan, 0777, true);
-    $create_folder = mkdir("upload/".$nip_peg.'/'.$pendidikan, 0777, true);
-    $create_folder = mkdir("upload/".$nip_peg.'/'.$jabatan, 0777, true);
-    $create_folder = mkdir("upload/".$nip_peg.'/'.$kepangkatan, 0777, true);
+    $create_folder = mkdir("upload/".$nip_peg.'/diklat', 0777, true);
+    $create_folder = mkdir("upload/".$nip_peg.'/pendidikan', 0777, true);
+    $create_folder = mkdir("upload/".$nip_peg.'/jabatan', 0777, true);
+    $create_folder = mkdir("upload/".$nip_peg.'/kepangkatan', 0777, true);
+    $create_folder = mkdir("upload/".$nip_peg.'/dokumen', 0777, true);
     
     
 }
@@ -58,7 +54,7 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
     $uploadOk = 0;
 }
 // Allow certain file formats
-if($imageFileType != "JPG"&&$imageFileType != "PNG"&&$imageFileType != "JPEG"&&$imageFileType != "GIF") {
+if($imageFileType != "JPG"&&$imageFileType != "jpg"&&$imageFileType != "PNG"&&$imageFileType != "png"&&$imageFileType != "JPEG"&&$imageFileType != "jpeg"&&$imageFileType != "GIF"&&$imageFileType != "gif") {
     echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
     $uploadOk = 0;
 }
@@ -86,7 +82,8 @@ if ($uploadOk == 0) {
 //echo $alamat;
 //echo $target_file;
 
-$input_pegawai = inputPegawai($nip_peg,$nama_lengkap,$tmpt_lahir,$tgl_lahir,$jenis_kelamin,$status_peg,$agama,$stts_nikah,$tgl_nikah,$alamat,$target_file);
+$input_pegawai = inputPegawai($nip_peg,$nama_lengkap,$tmpt_lahir,$tgl_lahir,$jenis_kelamin,$status_peg,$agama,$stts_nikah,$tgl_nikah,$alamat,$no_karpeg,$no_npwp,$no_askes,$target_file);
+
 
 if(isset($input_pegawai)){
     header("Location: $base_url/input_pegawai.php?input=$nama_lengkap");

@@ -6,7 +6,7 @@ include 'db/pdo.php';
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>Sistem Kepegawaian BPKAD Kabupaten Banjar Provinsi Kalimantan Selatan</title>
+		<title>SIMENS BPKAD KAB.BANJAR</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -32,7 +32,7 @@ include 'db/pdo.php';
       </button>
       <a class="navbar-brand" href="<?php echo $base_url;?>"><img title="BPKAD Kabupaten Banjar" width="50" src="<?php echo $base_url."/logo.jpg"; ?>"/></a>
     </div>
-    <div class="site-title">SISTEM INFORMASI KEPEGAWAIAN BADAN PEMERIKSAAN KEUANGAN ANGGARAN DAERAH<br />KABUPATEN BANJAR KALIMANTAN SELATAN</div>
+    <div class="site-title">SISTEM INFORMASI DOKUMEN KEPEGAWAIAN PNS BADAN PENGELOLAAN KEUANGAN DAN ASET DAERAH KABUPATEN BANJAR - SUB BAGIAN UMUM DAN KEPEGAWAIAN</div>
     <div class="collapse navbar-collapse">
       <?php 
       if(isset($_SESSION['username'])){
@@ -47,8 +47,7 @@ include 'db/pdo.php';
         </li>        
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Diklat Pegawai</a>
             <ul class="dropdown-menu">
-		        <li><a href="<?php echo $base_url;?>/input_diklat_struktural_pegawai.php">Input Diklat Struktural</a></li>
-                <li><a href="<?php echo $base_url;?>/input_diklat_fungsional_pegawai.php">Input Diklat Fungsional</a></li>                
+		        <li><a href="<?php echo $base_url;?>/input_diklat_pegawai.php">Input Diklat</a></li>               
 	        </ul>
         </li>
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Kepangkatan Pegawai</a>
@@ -66,9 +65,14 @@ include 'db/pdo.php';
 		        <li><a href="<?php echo $base_url;?>/input_pendidikan_pegawai.php">Input Pendidikan Pegawai</a></li>
 	        </ul>
         </li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Pelatihan Pegawai</a>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Keluarga Pegawai</a>
             <ul class="dropdown-menu">
-		        <li><a href="<?php echo $base_url;?>/input_pelatihan_pegawai.php">Input Pelatihan Pegawai</a></li>
+		        <li><a href="<?php echo $base_url;?>/input_keluarga_pegawai.php">Input Keluarga Pegawai</a></li>
+	        </ul>
+        </li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dokumen</a>
+            <ul class="dropdown-menu">
+		        <li><a href="<?php echo $base_url;?>/input_dokumen_pendukung_pegawai.php">Input Dokumen Pendukung</a></li>
 	        </ul>
         </li>
         <li><a href="<?php echo $base_url;?>/logout.php">Logout</a></li>
@@ -82,7 +86,7 @@ include 'db/pdo.php';
         <li><a href="#">Kepangkatan Pegawai</a></li>
         <li><a href="#">Jabatan Pegawai</a></li>
         <li><a href="#">Pendidikan Pegawai</a></li>
-        <li><a href="#">Pelatihan Pegawai</a></li>
+        <li><a href="#">Dokumen</a></li>
       </ul>
       <?php
       }

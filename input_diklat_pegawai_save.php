@@ -2,11 +2,11 @@
 include "db/pdo.php";
 
 $nama_lengkap = $_POST['nama_lengkap'];
+$jenis_diklat = $_POST['jenis_diklat'];
 $nama_diklat = $_POST['nama_diklat'];
-$tahun = $_POST['tahun'];
 $tempat = $_POST['tempat'];
-$keterangan = $_POST['keterangan'];
-$folder = "diklat_struktural";
+$tahun = $_POST['tahun'];
+$folder = "diklat";
 
 //echo $nama_lengkap;
 //echo $nama_diklat;
@@ -61,10 +61,10 @@ if ($uploadOk == 0) {
 }
 
 
-$input_diklat_struktural = inputDiklatStruktural($nip_peg,$nama_diklat,$tahun,$tempat,$keterangan,$target_file);
+$input_diklat_struktural = inputDiklat($nip_peg,$jenis_diklat,$nama_diklat,$tempat,$tahun,$target_file);
 
 if(isset($input_diklat_struktural)){
-    header("Location: $base_url/input_diklat_struktural_pegawai.php?input=$nama_diklat&nama=$nama_lengkap");
+    header("Location: $base_url/pegawai.php?search=$nama_lengkap");
 }
 
 ?>

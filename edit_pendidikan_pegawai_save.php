@@ -3,9 +3,9 @@ include "db/pdo.php";
 
 $id = $_POST['id'];
 $nip_peg = $_POST['nip_peg'];
-$tingkat_pendidikan = $_POST['tingkat_pendidikan'];
-$nama_pendidikan = $_POST['nama_pendidikan'];
-$kualifikasi = $_POST['kualifikasi'];
+$jenjang_pendidikan = $_POST['jenjang_pendidikan'];
+$nama_sekolah = $_POST['nama_sekolah'];
+$no_ijazah = $_POST['no_ijazah'];
 $tahun_lulus = $_POST['tahun_lulus'];
 $path_pendidikan = $_POST['path_pendidikan'];
 $folder = "pendidikan";
@@ -22,7 +22,7 @@ if($file_name==""){
     //echo $kualifikasi;
     //echo $tahun_lulus;
     //echo $path_pendidikan;
-    $edit_pendidikan = editPendidikan($id,$nip_peg,$tingkat_pendidikan,$nama_pendidikan,$kualifikasi,$tahun_lulus,$path_pendidikan);
+    $edit_pendidikan = editPendidikan($id,$nip_peg,$jenjang_pendidikan,$nama_sekolah,$no_ijazah,$tahun_lulus,$path_pendidikan);
 } else {
     //echo $id;
     //echo $nip_peg;
@@ -77,12 +77,12 @@ if($file_name==""){
         $delete_previous_file = unlink($path_pendidikan);
     }
     
-    $edit_pendidikan = editPendidikan($id,$nip_peg,$tingkat_pendidikan,$nama_pendidikan,$kualifikasi,$tahun_lulus,$target_file);
+    $edit_pendidikan = editPendidikan($id,$nip_peg,$jenjang_pendidikan,$nama_sekolah,$no_ijazah,$tahun_lulus,$target_file);
 }
 
 if(isset($edit_pendidikan)){
     //header("Location: $base_url/edit_pendidikan_pegawai.php?nip_peg=$nip_peg&id=$id&edit=true");
-     header("Location: $base_url/pegawai.php?nip_peg=$nip_peg");
+     header("Location: $base_url/pegawai.php?search=$nip_peg");
 }
 
 ?>

@@ -13,6 +13,9 @@ $agama = $_POST['agama'];
 $stts_nikah = $_POST['stts_nikah'];
 $tgl_nikah = $_POST['tgl_nikah'];
 $alamat = $_POST['alamat'];
+$no_karpeg = $_POST['no_karpeg'];
+$no_npwp = $_POST['no_npwp'];
+$no_askes = $_POST['no_askes'];
 $foto_path = $_POST['foto_path'];
 
 $target_dir = "upload/$nip_peg/";
@@ -33,7 +36,7 @@ if($file_name==""){
     //echo $tgl_nikah;
     //echo $alamat;
     //echo $foto_path;
-    $edit_pegawai = editPegawai($id,$nip_peg,$nama_lengkap,$tmpt_lahir,$tgl_lahir,$jenis_kelamin,$status_peg,$agama,$stts_nikah,$tgl_nikah,$alamat,$foto_path);
+    $edit_pegawai = editPegawai($id,$nip_peg,$nama_lengkap,$tmpt_lahir,$tgl_lahir,$jenis_kelamin,$status_peg,$agama,$stts_nikah,$tgl_nikah,$alamat,$no_karpeg,$no_npwp,$no_askes,$foto_path);
 } else {
     //echo $id;
     //echo $nama_lengkap;
@@ -92,12 +95,12 @@ if($file_name==""){
     $delete_previous_file = unlink($foto_path);
     
     if($delete_previous_file==1){
-        $edit_pegawai = editPegawai($id,$nip_peg,$$nama_lengkapc,$tmpt_lahir,$tgl_lahir,$jenis_kelamin,$status_peg,$agama,$stts_nikah,$tgl_nikah,$alamat,$target_file);
+        $edit_pegawai = editPegawai($id,$nip_peg,$$nama_lengkapc,$tmpt_lahir,$tgl_lahir,$jenis_kelamin,$status_peg,$agama,$stts_nikah,$tgl_nikah,$alamat,$no_karpeg,$no_npwp,$no_askes,$target_file);
     }
 }   
 
 if(isset($edit_pegawai)){
     //header("Location: $base_url/edit_pegawai.php?nip_peg=$nip_peg&edit=$nama_lengkap");
-     header("Location: $base_url/pegawai.php?nip_peg=$nip_peg");
+     header("Location: $base_url/pegawai.php?search=$nip_peg");
 }
 

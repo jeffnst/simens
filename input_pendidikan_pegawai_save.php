@@ -2,9 +2,9 @@
 include "db/pdo.php";
 
 $nama_lengkap = $_POST['nama_lengkap'];
-$tingkat_pendidikan = $_POST['tingkat_pendidikan'];
-$nama_pendidikan = $_POST['nama_pendidikan'];
-$kualifikasi = $_POST['kualifikasi'];
+$jenjang_pendidikan = $_POST['jenjang_pendidikan'];
+$nama_sekolah = $_POST['nama_sekolah'];
+$no_ijazah = $_POST['no_ijazah'];
 $tahun_lulus = $_POST['tahun_lulus'];
 $folder = "pendidikan";
 
@@ -61,10 +61,10 @@ if ($uploadOk == 0) {
 }
 
 
-$input_pendidikan = inputPendidikan($nip_peg,$tingkat_pendidikan,$nama_pendidikan,$kualifikasi,$tahun_lulus,$target_file);
+$input_pendidikan = inputPendidikan($nip_peg,$jenjang_pendidikan,$nama_sekolah,$no_ijazah,$tahun_lulus,$target_file);
 
 if(isset($input_pendidikan)){
-    header("Location: $base_url/input_pendidikan_pegawai.php?input=$nama_lengkap");
+    header("Location: $base_url/pegawai.php?search=$nama_lengkap");
 }
 
 ?>

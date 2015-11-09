@@ -90,6 +90,21 @@ if(isset($_GET['edit'])){
         <td>:</td>
         <td><input type="text" name="alamat" value="<?php echo $row['alamat']; ?>"/></td>
     </tr>
+    <tr>
+        <td><label>Nomor Karpeg</label></td>
+        <td>:</td>
+        <td><input type="text" name="no_karpeg" value="<?php echo $row['no_karpeg']; ?>"/></td>
+    </tr>
+    <tr>
+        <td><label>Nomor NPWP</label></td>
+        <td>:</td>
+        <td><input type="text" name="no_npwp" value="<?php echo $row['no_npwp']; ?>"/></td>
+    </tr>
+    <tr>
+        <td><label>Nomor Askes</label></td>
+        <td>:</td>
+        <td><input type="text" name="no_askes" value="<?php echo $row['no_askes']; ?>"/></td>
+    </tr>
     <input type="hidden" name="foto_path" value="<?php echo $row['foto_path']; ?>"/>
     <tr>
         <td><label>Ganti Foto??</label><br /><label>Select image to upload:</label></td>

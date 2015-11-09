@@ -3,13 +3,12 @@ include "db/pdo.php";
 
 $id = $_POST['id'];
 $nip_peg = $_POST['nip_peg'];
-$nama_lengkap_keluarga = $_POST['nama_lengkap_keluarga'];
-$tmpt_lahir_keluarga = $_POST['tmpt_lahir_keluarga'];
-$tgl_lahir_keluarga = $_POST['tgl_lahir_keluarga'];
-$jenis_kelamin_keluarga = $_POST['jenis_kelamin_keluarga'];
-$status_keluarga = $_POST['status_keluarga'];
-$pekerjaan_keluarga = $_POST['pekerjaan_keluarga'];
-$keterangan_keluarga = $_POST['keterangan_keluarga'];
+$nama_lengkap = $_POST['nama_lengkap'];
+$tmpt_lahir = $_POST['tmpt_lahir'];
+$tgl_lahir = $_POST['tgl_lahir'];
+$jenis_kelamin = $_POST['jenis_kelamin'];
+$status = $_POST['status'];
+$keterangan = $_POST['keterangan'];
 
 
 //echo $id;
@@ -23,12 +22,12 @@ $keterangan_keluarga = $_POST['keterangan_keluarga'];
 //echo $keterangan_keluarga;
 
 if($id != ""){
-    $edit_keluarga_pegawai = editKeluargaPegawai($id,$nip_peg,$nama_lengkap_keluarga,$tmpt_lahir_keluarga,$tgl_lahir_keluarga,$jenis_kelamin_keluarga,$status_keluarga,$pekerjaan_keluarga,$keterangan_keluarga);
+    $edit_keluarga_pegawai = editKeluargaPegawai($id,$nip_peg,$status,$nama_lengkap,$tgl_lahir,$tmpt_lahir,$jenis_kelamin,$keterangan);
 }
 
 if(isset($edit_keluarga_pegawai)){
     //header("Location: $base_url/edit_keluarga_pegawai.php?nip_peg=$nip_peg&id=$id&edit=true");
-     header("Location: $base_url/pegawai.php?nip_peg=$nip_peg");
+     header("Location: $base_url/pegawai.php?search=$nip_peg");
 }
 
 
