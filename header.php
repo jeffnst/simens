@@ -30,9 +30,9 @@ include 'db/pdo.php';
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php echo $base_url;?>"><img title="BPKAD Kabupaten Banjar" width="50" src="<?php echo $base_url."/logo.JPG"; ?>"/></a>
+      <a class="navbar-brand" href="<?php echo $base_url;?>"><img title="BPKAD Kabupaten Banjar" width="70" src="<?php echo $base_url."/logo.JPG"; ?>"/></a>
     </div>
-    <div class="site-title">SISTEM INFORMASI DOKUMEN KEPEGAWAIAN PNS BADAN PENGELOLAAN KEUANGAN DAN ASET DAERAH KABUPATEN BANJAR - SUB BAGIAN UMUM DAN KEPEGAWAIAN</div>
+    <div class="site-title">SISTEM INFORMASI DOKUMEN KEPEGAWAIAN PNS (SIMENS)<br/>BADAN PENGELOLAAN KEUANGAN DAN ASET DAERAH KABUPATEN BANJAR<br/>SUB BAGIAN UMUM DAN KEPEGAWAIAN</div>
     <div class="collapse navbar-collapse">
       <?php 
       if(isset($_SESSION['username'])){
