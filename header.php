@@ -45,11 +45,6 @@ include 'db/pdo.php';
                 <li><a href="<?php echo $base_url;?>/input_keluarga_pegawai.php">Input Keluarga Pegawai</a></li>                
 	        </ul>
         </li>        
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Diklat Pegawai</a>
-            <ul class="dropdown-menu">
-		        <li><a href="<?php echo $base_url;?>/input_diklat_pegawai.php">Input Diklat</a></li>               
-	        </ul>
-        </li>
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Kepangkatan Pegawai</a>
             <ul class="dropdown-menu">
 		        <li><a href="<?php echo $base_url;?>/input_kepangkatan_pegawai.php">Input Kepangkatan Pegawai</a></li>
@@ -63,6 +58,11 @@ include 'db/pdo.php';
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Pendidikan Pegawai</a>
             <ul class="dropdown-menu">
 		        <li><a href="<?php echo $base_url;?>/input_pendidikan_pegawai.php">Input Pendidikan Pegawai</a></li>
+	        </ul>
+        </li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Diklat Pegawai</a>
+            <ul class="dropdown-menu">
+		        <li><a href="<?php echo $base_url;?>/input_diklat_pegawai.php">Input Diklat</a></li>               
 	        </ul>
         </li>
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Keluarga Pegawai</a>
@@ -82,10 +82,10 @@ include 'db/pdo.php';
       ?>
       <ul class="nav navbar-nav">
         <li><a href="<?php echo $base_url;?>">Home</a></li>
-        <li><a href="#">Diklat Pegawai</a></li>
         <li><a href="#">Kepangkatan Pegawai</a></li>
         <li><a href="#">Jabatan Pegawai</a></li>
         <li><a href="#">Pendidikan Pegawai</a></li>
+        <li><a href="#">Diklat Pegawai</a></li>
         <li><a href="#">Dokumen</a></li>
       </ul>
       <?php
