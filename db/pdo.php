@@ -4,7 +4,9 @@
 session_start();
 //$base_url = "http://92.222.71.15/simens"; //server
 
-$base_url = "http://localhost/simens";  //local
+$base_url = "http://192.168.3.23/simens"; //bpkad
+
+//$base_url = "http://localhost/simens";  //local
 
 date_default_timezone_set("ASIA/MAKASSAR");
 
@@ -20,7 +22,9 @@ date_default_timezone_set("ASIA/MAKASSAR");
 
 //$base_url = "http://92.222.71.15/simens"; //server
 
-$base_url = "http://localhost/simens";  //local
+$base_url = "http://192.168.3.23/simens"; //bpkad
+
+//$base_url = "http://localhost/simens";  //local
 function testdb_connect() {
 //$dbh = new PDO("mysql:host=localhost;dbname=simpeg_bpkad", "root", "slamdunk23"); //server
 $dbh = new PDO("mysql:host=localhost;dbname=simpeg_bpkad", "root", ""); //local
