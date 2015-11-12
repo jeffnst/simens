@@ -10,9 +10,9 @@ include 'db/pdo.php';
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-          <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-          <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-          <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+          <link rel="stylesheet" href="css/smoothness/jquery-ui.css">
+          <script src="js/jquery-1.10.2.js"></script>
+          <script src="js/jquery-ui.js"></script>
           <link rel="stylesheet" href="/resources/demos/style.css">
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>

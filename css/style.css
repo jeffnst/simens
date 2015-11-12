@@ -40,7 +40,8 @@ div.ui-datepicker{
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #577570 !important;
+    /*color: #577570 !important;*/
+	color: #fff !important;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
