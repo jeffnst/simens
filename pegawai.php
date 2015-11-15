@@ -148,7 +148,7 @@
                     <td><?php echo $kep['tmt']; ?></td>
                     <td><?php echo $kep['no_sk']; ?></td>
                     <td><?php echo parseTtl($kep['tgl_sk']); ?></td>
-                    <td><?php if($kep['path_kepangkatan']!= "") {?> <a target="_blank" href="<?php echo $base_url."/".$kep['path_kepangkatan'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$kep['path_kepangkatan'] ?>')" /> <?php } ?> | <a href="<?php echo $base_url;?>/delete_kepangkatan_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kep['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></td>
+                    <td><?php if($kep['path_kepangkatan']!= "") {?> <a target="_blank" href="<?php echo $base_url."/".$kep['path_kepangkatan'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$kep['path_kepangkatan'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_kepangkatan_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kep['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                  endforeach;
@@ -178,7 +178,7 @@
                     <td><?php echo $jab['tgl_sk'] ?></td>
                     <td><?php echo $jab['nama_jabatan']; ?></td>
                     <td><?php echo $jab['unit_kerja'] ?></td>
-                    <td><?php if($jab['path_jabatan']!= "") {?> <a target="_blank" href="<?php echo $base_url."/".$jab['path_jabatan'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$jab['path_jabatan'] ?>')" /> <?php } ?> | <a href="<?php echo $base_url;?>/delete_jabatan_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $jab['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></td>
+                    <td><?php if($jab['path_jabatan']!= "") {?> <a target="_blank" href="<?php echo $base_url."/".$jab['path_jabatan'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$jab['path_jabatan'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_jabatan_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $jab['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                  endforeach;
@@ -209,7 +209,7 @@
                     <td><?php echo $pend['nama_sekolah'] ?></td>
                     <td><?php echo $pend['no_ijazah'] ?></td>
                     <td><?php echo $pend['tahun_lulus'] ?></td>
-                    <td><?php if($pend['path_pendidikan']!= "") {?> <a target="_blank" href="<?php echo $base_url."/".$pend['path_pendidikan'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$pend['path_pendidikan'] ?>')" /> <?php } ?> | <a href="<?php echo $base_url;?>/delete_pendidikan_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $pend['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></td>
+                    <td><?php if($pend['path_pendidikan']!= "") {?> <a target="_blank" href="<?php echo $base_url."/".$pend['path_pendidikan'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$pend['path_pendidikan'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_pendidikan_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $pend['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                  endforeach;
@@ -238,7 +238,7 @@
                     <td><?php echo $dik['nama_diklat'] ?></td>
                     <td><?php echo $dik['tempat'] ?></td>
                     <td><?php echo $dik['tahun'] ?></td>
-                    <td><?php if($dik['path_diklat']!= "") {?> <a target="_blank" href="<?php echo $base_url."/".$dik['path_diklat'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$dik['path_diklat'] ?>')" /> <?php } ?> | <a href="<?php echo $base_url;?>/delete_diklat_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $dik['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></td>
+                    <td><?php if($dik['path_diklat']!= "") {?> <a target="_blank" href="<?php echo $base_url."/".$dik['path_diklat'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$dik['path_diklat'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_diklat_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $dik['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                  endforeach;
@@ -272,7 +272,7 @@
                     <td><?php echo parseTtl($kel['tgl_lahir']) ?></td>
                     <td><?php echo $kel['tmpt_lahir'] ?></td>
                     <td><?php echo $kel['jenis_kelamin'] ?></td>
-                    <td><?php echo $kel['keterangan'] ?> | <a href="<?php echo $base_url;?>/delete_keluarga_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kel['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></td>
+                    <td><?php if($kel['keterangan']!= "") {?> <a target="_blank" href="<?php echo $base_url."/".$kel['keterangan'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$kel['keterangan'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_diklat_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kel['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                 endif;
@@ -288,7 +288,7 @@
                     <td><?php echo parseTtl($kel['tgl_lahir']) ?></td>
                     <td><?php echo $kel['tmpt_lahir'] ?></td>
                     <td><?php echo $kel['jenis_kelamin'] ?></td>
-                    <td><?php echo $kel['keterangan'] ?> | <a href="<?php echo $base_url;?>/delete_keluarga_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kel['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></td>
+                    <td><?php if($kel['keterangan']!= "") {?> <a target="_blank" href="<?php echo $base_url."/".$kel['keterangan'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$kel['keterangan'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_diklat_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kel['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                 endif;
@@ -304,7 +304,7 @@
                     <td><?php echo parseTtl($kel['tgl_lahir']) ?></td>
                     <td><?php echo $kel['tmpt_lahir'] ?></td>
                     <td><?php echo $kel['jenis_kelamin'] ?></td>
-                    <td><?php echo $kel['keterangan'] ?> | <a href="<?php echo $base_url;?>/delete_keluarga_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kel['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></td>
+                    <td><?php if($kel['keterangan']!= "") {?> <a target="_blank" href="<?php echo $base_url."/".$kel['keterangan'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$kel['keterangan'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_diklat_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kel['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                 endif;
@@ -339,7 +339,7 @@
                 <tr>
                     <td>1</td>
                     <td><?php if(isset($_SESSION['username'])&&isset($kn['jenis_dokumen'])){?><a href="<?php echo $base_url;?>/edit_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kn['id'] ?>"><?php } ?><?php echo $kn['jenis_dokumen'] ?></a></td>
-                    <td><?php if($kn['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$kn['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$kn['path_dokumen'] ?>')" /> <?php } ?> | <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kn['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></td>
+                    <td><?php if($kn['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$kn['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$kn['path_dokumen'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kn['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                 endforeach;
@@ -363,7 +363,7 @@
                 <tr>
                     <td>2</td>
                     <td><?php if(isset($_SESSION['username'])&&isset($kb['jenis_dokumen'])){?><a href="<?php echo $base_url;?>/edit_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kb['id'] ?>"><?php } ?><?php echo $kb['jenis_dokumen'] ?></a></td>
-                    <td><?php if($kb['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$kb['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$kb['path_dokumen'] ?>')" /> <?php } ?> | <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kb['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></td>
+                    <td><?php if($kb['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$kb['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$kb['path_dokumen'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kb['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                 endforeach;
@@ -387,7 +387,7 @@
                 <tr>
                     <td>3</td>
                     <td><?php if(isset($_SESSION['username'])&&isset($ke['jenis_dokumen'])){?><a href="<?php echo $base_url;?>/edit_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $ke['id'] ?>"><?php } ?><?php echo $ke['jenis_dokumen'] ?></a></td>
-                    <td><?php if($ke['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$ke['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$ke['path_dokumen'] ?>')" /> <?php } ?> | <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $ke['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></td>
+                    <td><?php if($ke['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$ke['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$ke['path_dokumen'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $ke['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                 endforeach;
@@ -411,7 +411,7 @@
                 <tr>
                     <td>4</td>
                     <td><?php if(isset($_SESSION['username'])&&isset($skb['jenis_dokumen'])){?><a href="<?php echo $base_url;?>/edit_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $skb['id'] ?>"><?php } ?><?php echo $skb['jenis_dokumen'] ?></a></td>
-                    <td><?php if($skb['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$skb['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$skb['path_dokumen'] ?>')" /> <?php } ?> | <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $skb['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></td>
+                    <td><?php if($skb['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$skb['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$skb['path_dokumen'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $skb['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                 endforeach;
@@ -435,7 +435,7 @@
                 <tr>
                     <td>5</td>
                     <td><?php if(isset($_SESSION['username'])&&isset($sktb['jenis_dokumen'])){?><a href="<?php echo $base_url;?>/edit_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $sktb['id'] ?>"><?php } ?><?php echo $sktb['jenis_dokumen'] ?></a></td>
-                    <td><?php if($sktb['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$sktb['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$sktb['path_dokumen'] ?>')" /> <?php } ?> | <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $sktb['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></td>
+                    <td><?php if($sktb['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$sktb['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$sktb['path_dokumen'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $sktb['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                 endforeach;
@@ -459,7 +459,7 @@
                 <tr>
                     <td>6</td>
                     <td><?php if(isset($_SESSION['username'])&&isset($skib['jenis_dokumen'])){?><a href="<?php echo $base_url;?>/edit_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $skib['id'] ?>"><?php } ?><?php echo $skib['jenis_dokumen'] ?></a></td>
-                    <td><?php if($skib['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$skib['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$skib['path_dokumen'] ?>')" /> <?php } ?> | <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $skib['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></td>
+                    <td><?php if($skib['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$skib['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$skib['path_dokumen'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $skib['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                 endforeach;
@@ -483,7 +483,7 @@
                 <tr>
                     <td>7</td>
                     <td><?php if(isset($_SESSION['username'])&&isset($bas['jenis_dokumen'])){?><a href="<?php echo $base_url;?>/edit_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $bas['id'] ?>"><?php } ?><?php echo $bas['jenis_dokumen'] ?></a></td>
-                    <td><?php if($bas['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$bas['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$bas['path_dokumen'] ?>')" /> <?php } ?> | <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $bas['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></td>
+                    <td><?php if($bas['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$bas['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$bas['path_dokumen'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $bas['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                 endforeach;
@@ -507,7 +507,7 @@
                 <tr>
                     <td>8</td>
                     <td><?php if(isset($_SESSION['username'])&&isset($ktp['jenis_dokumen'])){?><a href="<?php echo $base_url;?>/edit_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $ktp['id'] ?>"><?php } ?><?php echo $ktp['jenis_dokumen'] ?></a></td>
-                    <td><?php if($ktp['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$ktp['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$ktp['path_dokumen'] ?>')" /> <?php } ?> | <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $ktp['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></td>
+                    <td><?php if($ktp['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$ktp['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$ktp['path_dokumen'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $ktp['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                 endforeach;
@@ -530,7 +530,7 @@
                 <tr>
                     <td>9</td>
                     <td><?php if(isset($_SESSION['username'])&&isset($npwp['jenis_dokumen'])){?><a href="<?php echo $base_url;?>/edit_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $npwp['id'] ?>"><?php } ?><?php echo $npwp['jenis_dokumen'] ?></a></td>
-                    <td><?php if($npwp['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$npwp['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$npwp['path_dokumen'] ?>')" /> <?php } ?> | <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $npwp['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></td>
+                    <td><?php if($npwp['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$npwp['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$npwp['path_dokumen'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $npwp['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                 endforeach;
@@ -553,7 +553,7 @@
                 <tr>
                     <td>10</td>
                     <td><?php if(isset($_SESSION['username'])&&isset($ak['jenis_dokumen'])){?><a href="<?php echo $base_url;?>/edit_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $ak['id'] ?>"><?php } ?><?php echo $ak['jenis_dokumen'] ?></a></td>
-                    <td><?php if($ak['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$ak['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$ak['path_dokumen'] ?>')" /> <?php } ?> | <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $ak['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></td>
+                    <td><?php if($ak['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$ak['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$ak['path_dokumen'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $ak['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                 endforeach;
@@ -576,7 +576,7 @@
                 <tr>
                     <td>11</td>
                     <td><?php if(isset($_SESSION['username'])&&isset($ask['jenis_dokumen'])){?><a href="<?php echo $base_url;?>/edit_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $ask['id'] ?>"><?php } ?><?php echo $ask['jenis_dokumen'] ?></a></td>
-                    <td><?php if($ask['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$ask['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$ask['path_dokumen'] ?>')" /> <?php } ?> | <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $ask['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></td>
+                    <td><?php if($ask['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$ask['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$ask['path_dokumen'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $ask['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                 endforeach;
@@ -599,7 +599,7 @@
                 <tr>
                     <td>12</td>
                     <td><?php if(isset($_SESSION['username'])&&isset($kk['jenis_dokumen'])){?><a href="<?php echo $base_url;?>/edit_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kk['id'] ?>"><?php } ?><?php echo $kk['jenis_dokumen'] ?></a></td>
-                    <td><?php if($kk['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$kk['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$kk['path_dokumen'] ?>')" /> <?php } ?> | <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kk['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></a></td>
+                    <td><?php if($kk['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$kk['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$kk['path_dokumen'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kk['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></a><?php } ?></td>
                 </tr>
                 <?php
                 endforeach;
@@ -622,7 +622,7 @@
                 <tr>
                     <td>13</td>
                     <td><?php if(isset($_SESSION['username'])&&isset($skp['jenis_dokumen'])){?><a href="<?php echo $base_url;?>/edit_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $skp['id'] ?>"><?php } ?><?php echo $skp['jenis_dokumen'] ?></a></td>
-                    <td><?php if($skp['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$skp['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$skp['path_dokumen'] ?>')" /> <?php } ?> | <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $skp['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /></td>
+                    <td><?php if($skp['path_dokumen']!= ""){?> <a target="_blank" href="<?php echo $base_url."/".$skp['path_dokumen'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$skp['path_dokumen'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_dokumen_pendukung_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $skp['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                 endforeach;

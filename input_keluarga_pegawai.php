@@ -86,9 +86,9 @@ if(isset($_GET['input'])){
         </td>
     </tr>
     <tr>
-        <td><label>Keterangan</label></td>
+        <td><label>Select image to upload:</label></td>
         <td>:</td>
-        <td><input type="text" name="keterangan"/></td>
+        <td><input type="file" name="fileToUpload" id="fileToUpload"></td>
     </tr>
         <tr>
         <td colspan="3"><input type="submit" value="Input" name="submit" /></td>

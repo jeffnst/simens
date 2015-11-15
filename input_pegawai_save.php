@@ -23,6 +23,7 @@ if (isset($nip_peg)){
     $create_folder = mkdir("upload/".$nip_peg.'/jabatan', 0777, true);
     $create_folder = mkdir("upload/".$nip_peg.'/kepangkatan', 0777, true);
     $create_folder = mkdir("upload/".$nip_peg.'/dokumen', 0777, true);
+    $create_folder = mkdir("upload/".$nip_peg.'/keluarga', 0777, true);
     
     
 }

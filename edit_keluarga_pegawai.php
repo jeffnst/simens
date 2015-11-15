@@ -73,10 +73,11 @@ foreach($keluargas as $row):
             </select>
         </td>
     </tr>
+    <input type="hidden" name="keterangan" value="<?php echo $row['keterangan']; ?>"/>
     <tr>
-        <td><label>Keterangan</label></td>
+        <td><label>Ganti Foto??</label><br /><label>Select image to upload:</label></td>
         <td>:</td>
-        <td><input type="text" name="keterangan" value="<?php echo $row['keterangan']; ?>"/></td>
+        <td><input type="file" name="fileToUpload" id="fileToUpload"></td>
     </tr>
         <tr>
         <td colspan="3"><input type="submit" value="Input" name="submit" /></td>
