@@ -13,7 +13,7 @@
 ?>
 <div>
 <h3>Badan Pengelolaan Keuangan dan Aset Daerah</h3>
-<p>Badan Pengelolaan Keuangan dan Aset Daerah mempunyai tugas :</p>
+<p>A. Badan Pengelolaan Keuangan dan Aset Daerah mempunyai tugas :</p>
 <ol>
     <li>merumuskan dan menetapkan kebijakan teknis pengelolaan keuangan dan aset daerah sesuai dengan kebijakan yang ditetapkan oleh Bupati berdasarkan peraturan perundang-undangan yang berlaku</li>
     <li>merumuskan dan menetapkan kebijakan operasional, memfasilitasi dan dukungan atas penyelenggaraan pemerintahan daerah di bidang perbendaharaan</li>
@@ -29,7 +29,7 @@
 </div>
 
 <div>
-<p>Sub Bagian Umum dan Kepegawaian, mempunyai tugas :</p>
+<p>B. Sub Bagian Umum dan Kepegawaian, mempunyai tugas :</p>
 <ol>
     <li>melakukan kegiatan ketatausahaan yang meliputi surat-menyurat, pengetikan, penggandaan dan pengelolaan kearsipan sesuai petunjuk teknis administasi perkantoran</li>
     <li>memberikan pelayanan alat-alat tulis kantor dan perlengkapan lainnya, urusan keprotokolan dan pelayanan tamu terhadap satuan organisasi di lingkungan badan pengelolaan keuangan dan aset daerah</li>
