@@ -27,7 +27,7 @@
 </ol>
 
 </div>
-
+<br />
 <div>
 <p>B. Sub Bagian Umum dan Kepegawaian, mempunyai tugas :</p>
 <ol>
