@@ -53,7 +53,7 @@
         	
             </form>
             <?php
-            if ($nopass==true) {
+            if (isset($_GET['nopass'])&&$_GET['nopass']==true) {
           		echo "<div><span style='color:red;'></span></div>";
           	}
             ?>
