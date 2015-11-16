@@ -10,8 +10,8 @@
 
         //Reset the page's HTML with div's HTML only
         document.body.innerHTML = 
-          "<html><head><title></title></head><body>" + 
-          divElements + "</body>";
+          "<html><head><title></title></head><body><img src='"+ 
+          divElements +"' /></body>";
 
         //Print Page
         window.print();
@@ -316,7 +316,7 @@
      <div>
         <h4>DOKUMEN PENDUKUNG</h4>
         <?php
-        $keluargas = getKeluargaPegawai($nip_peg);
+ //       $keluargas = getKeluargaPegawai($nip_peg);
         ?>
         <div>
             <table border="1">
@@ -333,7 +333,8 @@
                 ?>
                 <?php 
                 $dokumens = getDokumen($row['nip_peg'],'Konversi NIP');
-                if($dokumens[0]!=''){
+				//var_dump($dokumens);
+                if(!empty($dokumens)){
                 foreach($dokumens as $kn):
                 ?>
                 <tr>
@@ -357,7 +358,7 @@
                 
                 <?php 
                 $dokumens = getDokumen($row['nip_peg'],'Karpeg Biasa');
-                if($dokumens[0]!=''){
+                if(!empty($dokumens)){
                 foreach($dokumens as $kb):
                 ?>
                 <tr>
@@ -381,7 +382,7 @@
                 
                 <?php 
                 $dokumens = getDokumen($row['nip_peg'],'Karpeg Elektronik');
-                if($dokumens[0]!=''){
+                if(!empty($dokumens)){
                 foreach($dokumens as $ke):
                 ?>
                 <tr>
@@ -405,7 +406,7 @@
                 
                 <?php 
                 $dokumens = getDokumen($row['nip_peg'],'SK Berkala');
-                if($dokumens[0]!=''){
+                if(!empty($dokumens)){
                 foreach($dokumens as $skb):
                 ?>
                 <tr>
@@ -429,7 +430,7 @@
                 
                 <?php 
                 $dokumens = getDokumen($row['nip_peg'],'SK Tugas Belajar');
-                if($dokumens[0]!=''){
+                if(!empty($dokumens)){
                 foreach($dokumens as $sktb):
                 ?>
                 <tr>
@@ -453,7 +454,7 @@
                 
                 <?php 
                 $dokumens = getDokumen($row['nip_peg'],'SK Ijin Belajar');
-                if($dokumens[0]!=''){
+                if(!empty($dokumens)){
                 foreach($dokumens as $skib):
                 ?>
                 <tr>
@@ -477,7 +478,7 @@
                 
                 <?php 
                 $dokumens = getDokumen($row['nip_peg'],'Berita Acara Sumpah Janji PNS');
-                if($dokumens[0]!=''){
+                if(!empty($dokumens)){
                 foreach($dokumens as $bas):
                 ?>
                 <tr>
@@ -501,7 +502,7 @@
                 
                 <?php 
                 $dokumens = getDokumen($row['nip_peg'],'KTP');
-                if($dokumens[0]!=''){
+                if(!empty($dokumens)){
                 foreach($dokumens as $ktp):
                 ?>
                 <tr>
@@ -524,7 +525,7 @@
                 
                 <?php 
                 $dokumens = getDokumen($row['nip_peg'],'NPWP');
-                if($dokumens[0]!=''){
+                if(!empty($dokumens)){
                 foreach($dokumens as $npwp):
                 ?>
                 <tr>
@@ -547,7 +548,7 @@
                 
                 <?php 
                 $dokumens = getDokumen($row['nip_peg'],'Akte Kelahiran');
-                if($dokumens[0]!=''){
+                if(!empty($dokumens)){
                 foreach($dokumens as $ak):
                 ?>
                 <tr>
@@ -570,7 +571,7 @@
                 
                 <?php 
                 $dokumens = getDokumen($row['nip_peg'],'Askes');
-                if($dokumens[0]!=''){
+                if(!empty($dokumens)){
                 foreach($dokumens as $ask):
                 ?>
                 <tr>
@@ -593,7 +594,7 @@
                 
                 <?php 
                 $dokumens = getDokumen($row['nip_peg'],'Kartu Keluarga');
-                if($dokumens[0]!=''){
+                if(!empty($dokumens)){
                 foreach($dokumens as $kk):
                 ?>
                 <tr>
@@ -616,7 +617,7 @@
                 
                 <?php 
                 $dokumens = getDokumen($row['nip_peg'],'SKP');
-                if($dokumens[0]!=''){
+                if(!empty($dokumens)){
                 foreach($dokumens as $skp):
                 ?>
                 <tr>
