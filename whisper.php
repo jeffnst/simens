@@ -17,7 +17,7 @@ if($_POST['submit']=="Login"){
 			$_SESSION['username']=$username;
 			header("Location: $base_url/index.php");
 		} else {
-			header("Location: $base_url/login.php?nopass=true");
+			header("Location: $base_url/index.php?nopass=true");
 		}
 		
 	}	

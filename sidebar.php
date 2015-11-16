@@ -52,6 +52,12 @@
             </div>
         	
             </form>
+            <?php
+            if ($nopass==true) {
+          		echo "<div><span style='color:red;'></span></div>";
+          	}
+            ?>
+            
         </div>
         <?php } ?>
 	</div>
