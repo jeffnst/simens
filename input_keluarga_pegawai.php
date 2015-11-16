@@ -51,7 +51,6 @@ if(isset($_GET['input'])){
             </datalist>
         </td>
     </tr>
-	<input type="hidden" name="id" value="<?php echo $row['id']; ?>"/>
     <tr>
         <td><label>Nama Lengkap keluarga</label></td>
         <td>:</td>
