@@ -30,7 +30,6 @@ if(isset($_GET['input'])){
     <form action="input_pegawai_save.php" method="POST"  enctype="multipart/form-data">
 	<div class="tbl-no-border data-diri">
     <table id="left" border="0">
-	<input type="hidden" name="id" value="<?php echo $row['id']; ?>"/>
     <tr>
         <td><label>Nama Lengkap</label></td>
         <td>:</td>
