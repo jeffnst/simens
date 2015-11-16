@@ -333,10 +333,6 @@
                 ?>
                 <?php 
                 $dokumens = getDokumen($row['nip_peg'],'Konversi NIP');
-<<<<<<< HEAD
-				//var_dump($dokumens);
-=======
->>>>>>> 86a8e7fa9b50eab9587df2a641e31690cf03819f
                 if(!empty($dokumens)){
                 foreach($dokumens as $kn):
                 ?>
