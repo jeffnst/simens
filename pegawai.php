@@ -44,7 +44,7 @@
 <div>
     <div>
         <h4>IDENTITAS PEGAWAI</h4>
-        <div class="tbl-no-border data-diri">
+        <div class="tbl-no-border data-diri" style="width:450px;">
             <table id="left" border="0">
                 <tr>
                     <td>1.</td>
