@@ -16,6 +16,8 @@ $no_karpeg = $_POST['no_karpeg'];
 $no_npwp = $_POST['no_npwp'];
 $no_askes = $_POST['no_askes'];
 
+echo $nip_peg;
+
 
 if (isset($nip_peg)){
     $create_folder = mkdir("upload/".$nip_peg.'/diklat', 0777, true);
@@ -87,7 +89,7 @@ $input_pegawai = inputPegawai($nip_peg,$nama_lengkap,$tmpt_lahir,$tgl_lahir,$jen
 
 
 if(isset($input_pegawai)){
-    header("Location: $base_url/input_pegawai.php?input=$nama_lengkap");
+    header("Location: $base_url/pegawai.php?seach=$nama_lengkap");
 }
 
 ?>
