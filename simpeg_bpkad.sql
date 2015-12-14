@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.2.4
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Nov 09, 2015 at 12:41 PM
--- Server version: 5.1.41
--- PHP Version: 5.3.1
+-- Host: 127.0.0.1
+-- Generation Time: Dec 14, 2015 at 06:15 AM
+-- Server version: 5.6.17
+-- PHP Version: 5.5.12
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -36,13 +37,6 @@ CREATE TABLE IF NOT EXISTS `diklat` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
---
--- Dumping data for table `diklat`
---
-
-INSERT INTO `diklat` (`id`, `nip_peg`, `jenis_diklat`, `nama_diklat`, `tempat`, `tahun`, `path_diklat`) VALUES
-(1, 110033, 'A', 'B', 'C', '2015', 'upload/110033/diklat/geforce1.JPG');
-
 -- --------------------------------------------------------
 
 --
@@ -55,14 +49,7 @@ CREATE TABLE IF NOT EXISTS `dokumen` (
   `jenis_dokumen` varchar(200) DEFAULT NULL,
   `path_dokumen` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
-
---
--- Dumping data for table `dokumen`
---
-
-INSERT INTO `dokumen` (`id`, `nip_peg`, `jenis_dokumen`, `path_dokumen`) VALUES
-(2, 110033, 'Berita Acara Sumpah Janji PNS', 'upload/110033/dokumen/error archeage.JPG');
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 -- --------------------------------------------------------
 
@@ -80,13 +67,6 @@ CREATE TABLE IF NOT EXISTS `jabatan` (
   `path_jabatan` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
-
---
--- Dumping data for table `jabatan`
---
-
-INSERT INTO `jabatan` (`id`, `nip_peg`, `no_sk`, `tgl_sk`, `nama_jabatan`, `unit_kerja`, `path_jabatan`) VALUES
-(3, 110033, '1234567', '2015-11-05', 'AA', 'BB', 'upload/110033/jabatan/geforce2.JPG');
 
 -- --------------------------------------------------------
 
@@ -106,14 +86,6 @@ CREATE TABLE IF NOT EXISTS `keluarga_pegawai` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
---
--- Dumping data for table `keluarga_pegawai`
---
-
-INSERT INTO `keluarga_pegawai` (`id`, `nip_peg`, `status`, `nama_lengkap`, `tgl_lahir`, `tmpt_lahir`, `jenis_kelamin`, `keterangan`) VALUES
-(12, 110033, 'Istri', 'AA', '2015-11-02', 'BB', 'perempuan', 'CC'),
-(15, 110033, 'Orang Tua', 'R', '2015-11-02', 'T', 'perempuan', 'Y');
-
 -- --------------------------------------------------------
 
 --
@@ -132,13 +104,6 @@ CREATE TABLE IF NOT EXISTS `kepangkatan` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
---
--- Dumping data for table `kepangkatan`
---
-
-INSERT INTO `kepangkatan` (`id`, `nip_peg`, `jenis_pangkat`, `gol_ruang`, `tmt`, `no_sk`, `tgl_sk`, `path_kepangkatan`) VALUES
-(2, 110033, 'AA', 'BB', 'CC', '123456', '2015-11-05', 'upload/110033/kepangkatan/error archeage.JPG');
-
 -- --------------------------------------------------------
 
 --
@@ -147,7 +112,7 @@ INSERT INTO `kepangkatan` (`id`, `nip_peg`, `jenis_pangkat`, `gol_ruang`, `tmt`,
 
 CREATE TABLE IF NOT EXISTS `pegawai` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nip_peg` int(30) NOT NULL,
+  `nip_peg` varchar(50) NOT NULL,
   `nama_lengkap` varchar(200) DEFAULT NULL,
   `tmpt_lahir` varchar(100) DEFAULT NULL,
   `tgl_lahir` date DEFAULT NULL,
@@ -162,14 +127,15 @@ CREATE TABLE IF NOT EXISTS `pegawai` (
   `no_askes` varchar(200) NOT NULL,
   `foto_path` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
 
 --
 -- Dumping data for table `pegawai`
 --
 
 INSERT INTO `pegawai` (`id`, `nip_peg`, `nama_lengkap`, `tmpt_lahir`, `tgl_lahir`, `jenis_kelamin`, `status_peg`, `agama`, `stts_nikah`, `tgl_nikah`, `alamat`, `no_karpeg`, `no_npwp`, `no_askes`, `foto_path`) VALUES
-(8, 110033, 'Rully Lukman', 'Banjarmasin', '2015-11-18', 'laki-laki', 'Diragukan', 'Islam', 'Belum ', '0000-00-00', 'Banper', '-', '-', '-', 'upload/110033/DSC_0001_resize1.jpg');
+(9, '2147483647', 'Raudhatul Jannah', 'Martapura', '0000-00-00', 'perempuan', 'PNS', 'Islam', 'Kawin', '0000-00-00', 'Jl.P.Adurrahman', '', '', '', 'upload/196704101993032013/'),
+(20, '198704192011012014', 'GT. RIZKY MAYA SARI, S.Sos, M.Ec.Dev', 'BANJARMASIN', '1987-04-19', 'perempuan', 'PNS', 'ISLAM', '', '0000-00-00', 'JL. SULTAN ADAM KOMPLEK JUNJUNG BUIH NO. 3 RT.25 BANJARMASIN 70122', '', '', '', 'upload/198704192011012014/');
 
 -- --------------------------------------------------------
 
@@ -187,13 +153,6 @@ CREATE TABLE IF NOT EXISTS `pendidikan` (
   `path_pendidikan` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
-
---
--- Dumping data for table `pendidikan`
---
-
-INSERT INTO `pendidikan` (`id`, `nip_peg`, `jenjang_pendidikan`, `nama_sekolah`, `no_ijazah`, `tahun_lulus`, `path_pendidikan`) VALUES
-(3, 110033, 'AA', 'BB', '1234567', '2015', 'upload/110033/pendidikan/error archeage.JPG');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
