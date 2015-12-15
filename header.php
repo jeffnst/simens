@@ -65,11 +65,11 @@ include 'db/pdo.php';
 		        <li><a href="<?php echo $base_url;?>/input_diklat_pegawai.php">Input Diklat</a></li>               
 	        </ul>
         </li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Keluarga Pegawai</a>
+        <!--li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Keluarga Pegawai</a>
             <ul class="dropdown-menu">
 		        <li><a href="<?php echo $base_url;?>/input_keluarga_pegawai.php">Input Keluarga Pegawai</a></li>
 	        </ul>
-        </li>
+        </li-->
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dokumen</a>
             <ul class="dropdown-menu">
 		        <li><a href="<?php echo $base_url;?>/input_dokumen_pendukung_pegawai.php">Input Dokumen Pendukung</a></li>

@@ -272,7 +272,7 @@
                     <td><?php echo parseTtl($kel['tgl_lahir']) ?></td>
                     <td><?php echo $kel['tmpt_lahir'] ?></td>
                     <td><?php echo $kel['jenis_kelamin'] ?></td>
-                    <td><?php if($kel['keterangan']!= "") {?> <a target="_blank" href="<?php echo $base_url."/".$kel['keterangan'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$kel['keterangan'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_diklat_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kel['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
+                    <td><?php if($kel['keterangan']!= "") {?> <a target="_blank" href="<?php echo $base_url."/".$kel['keterangan'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$kel['keterangan'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_keluarga_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kel['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                 endif;
@@ -288,7 +288,7 @@
                     <td><?php echo parseTtl($kel['tgl_lahir']) ?></td>
                     <td><?php echo $kel['tmpt_lahir'] ?></td>
                     <td><?php echo $kel['jenis_kelamin'] ?></td>
-                    <td><?php if($kel['keterangan']!= "") {?> <a target="_blank" href="<?php echo $base_url."/".$kel['keterangan'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$kel['keterangan'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_diklat_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kel['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
+                    <td><?php if($kel['keterangan']!= "") {?> <a target="_blank" href="<?php echo $base_url."/".$kel['keterangan'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$kel['keterangan'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_keluarga_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kel['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                 endif;
@@ -304,7 +304,7 @@
                     <td><?php echo parseTtl($kel['tgl_lahir']) ?></td>
                     <td><?php echo $kel['tmpt_lahir'] ?></td>
                     <td><?php echo $kel['jenis_kelamin'] ?></td>
-                    <td><?php if($kel['keterangan']!= "") {?> <a target="_blank" href="<?php echo $base_url."/".$kel['keterangan'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$kel['keterangan'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_diklat_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kel['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
+                    <td><?php if($kel['keterangan']!= "") {?> <a target="_blank" href="<?php echo $base_url."/".$kel['keterangan'] ?>"><img width="32" src="<?php echo $base_url ?>/view.png" title="view" /></a>  |  <img width="32" src="<?php echo $base_url ?>/print.png" title="cetak" style="cursor:pointer;" onclick="javascript:printDiv('<?php echo $base_url."/".$kel['keterangan'] ?>')" /> <?php } ?> <?php if(isset($_SESSION['username'])){ ?>| <a href="<?php echo $base_url;?>/delete_keluarga_pegawai.php?nip_peg=<?php echo $row['nip_peg'];?>&id=<?php echo $kel['id']?>"><img width="32" src="<?php echo $base_url ?>/delete.png" title="delete" /><?php } ?></td>
                 </tr>
                 <?php
                 endif;

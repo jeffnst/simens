@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
+-- version 3.2.4
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 14, 2015 at 06:15 AM
--- Server version: 5.6.17
--- PHP Version: 5.5.12
+-- Host: localhost
+-- Generation Time: Dec 15, 2015 at 10:47 AM
+-- Server version: 5.1.41
+-- PHP Version: 5.3.1
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -28,14 +27,19 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `diklat` (
   `id` int(225) NOT NULL AUTO_INCREMENT,
-  `nip_peg` int(30) NOT NULL,
+  `nip_peg` varchar(50) NOT NULL,
   `jenis_diklat` varchar(200) NOT NULL,
   `nama_diklat` varchar(200) NOT NULL,
   `tempat` varchar(200) DEFAULT NULL,
   `tahun` varchar(200) DEFAULT NULL,
   `path_diklat` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `diklat`
+--
+
 
 -- --------------------------------------------------------
 
@@ -45,11 +49,16 @@ CREATE TABLE IF NOT EXISTS `diklat` (
 
 CREATE TABLE IF NOT EXISTS `dokumen` (
   `id` int(225) NOT NULL AUTO_INCREMENT,
-  `nip_peg` int(30) NOT NULL,
+  `nip_peg` varchar(50) NOT NULL,
   `jenis_dokumen` varchar(200) DEFAULT NULL,
   `path_dokumen` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `dokumen`
+--
+
 
 -- --------------------------------------------------------
 
@@ -59,14 +68,19 @@ CREATE TABLE IF NOT EXISTS `dokumen` (
 
 CREATE TABLE IF NOT EXISTS `jabatan` (
   `id` int(225) NOT NULL AUTO_INCREMENT,
-  `nip_peg` int(30) NOT NULL,
+  `nip_peg` varchar(50) NOT NULL,
   `no_sk` varchar(200) NOT NULL,
   `tgl_sk` date DEFAULT NULL,
   `nama_jabatan` varchar(200) DEFAULT NULL,
   `unit_kerja` varchar(200) DEFAULT NULL,
   `path_jabatan` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+
+--
+-- Dumping data for table `jabatan`
+--
+
 
 -- --------------------------------------------------------
 
@@ -76,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `jabatan` (
 
 CREATE TABLE IF NOT EXISTS `keluarga_pegawai` (
   `id` int(225) NOT NULL AUTO_INCREMENT,
-  `nip_peg` int(30) NOT NULL,
+  `nip_peg` varchar(50) NOT NULL,
   `status` varchar(200) DEFAULT NULL,
   `nama_lengkap` varchar(200) NOT NULL,
   `tgl_lahir` date DEFAULT NULL,
@@ -84,7 +98,12 @@ CREATE TABLE IF NOT EXISTS `keluarga_pegawai` (
   `jenis_kelamin` varchar(20) DEFAULT NULL,
   `keterangan` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+
+--
+-- Dumping data for table `keluarga_pegawai`
+--
+
 
 -- --------------------------------------------------------
 
@@ -94,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `keluarga_pegawai` (
 
 CREATE TABLE IF NOT EXISTS `kepangkatan` (
   `id` int(225) NOT NULL AUTO_INCREMENT,
-  `nip_peg` int(30) NOT NULL,
+  `nip_peg` varchar(50) NOT NULL,
   `jenis_pangkat` varchar(200) NOT NULL,
   `gol_ruang` varchar(200) DEFAULT NULL,
   `tmt` varchar(200) DEFAULT NULL,
@@ -102,7 +121,12 @@ CREATE TABLE IF NOT EXISTS `kepangkatan` (
   `tgl_sk` date DEFAULT NULL,
   `path_kepangkatan` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `kepangkatan`
+--
+
 
 -- --------------------------------------------------------
 
@@ -145,14 +169,19 @@ INSERT INTO `pegawai` (`id`, `nip_peg`, `nama_lengkap`, `tmpt_lahir`, `tgl_lahir
 
 CREATE TABLE IF NOT EXISTS `pendidikan` (
   `id` int(225) NOT NULL AUTO_INCREMENT,
-  `nip_peg` int(30) NOT NULL,
+  `nip_peg` varchar(50) NOT NULL,
   `jenjang_pendidikan` varchar(200) DEFAULT NULL,
   `nama_sekolah` varchar(200) DEFAULT NULL,
   `no_ijazah` varchar(200) DEFAULT NULL,
   `tahun_lulus` varchar(200) DEFAULT NULL,
   `path_pendidikan` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `pendidikan`
+--
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
