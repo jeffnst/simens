@@ -48,14 +48,14 @@ if($nip_peg!=""){
         $input_keluarga_pagawai = inputKeluargaPegawai($nip_peg,$status,$nama_lengkap_keluarga,$tgl_lahir,$tmpt_lahir,$jenis_kelamin,$target_file);
         
         if($imageFileType != ""){
-            $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-            if($check !== false) {
-               // echo "File is an image - " . $check["mime"] . ".";
-                $uploadOk = 1;
-            } else {
-                echo "File is not an image.";
-                $uploadOk = 0;
-            }
+ //           $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+ //           if($check !== false) {
+ //              // echo "File is an image - " . $check["mime"] . ".";
+ //               $uploadOk = 1;
+ //           } else {
+ //               echo "File is not an image.";
+ //               $uploadOk = 0;
+ //           }
             
             // Check if file already exists
             if (file_exists($target_file)) {
@@ -63,10 +63,10 @@ if($nip_peg!=""){
                 $uploadOk = 0;
             }
             // Check file size
-            if ($_FILES["fileToUpload"]["size"] > 500000) {
-                echo "Sorry, your file is too large.";
-                $uploadOk = 0;
-            }
+ //           if ($_FILES["fileToUpload"]["size"] > 500000) {
+ //               echo "Sorry, your file is too large.";
+ //                $uploadOk = 0;
+ //            }
             // Allow certain file formats
             if($imageFileType != "JPG"&&$imageFileType != "jpg"&&$imageFileType != "PNG"&&$imageFileType != "png"&&$imageFileType != "JPEG"&&$imageFileType != "jpeg"&&$imageFileType != "GIF"&&$imageFileType != "gif"&&$imageFileType != "PDF"&&$imageFileType != "pdf") {
                 echo "Sorry, only JPG, JPEG, PNG, PDF & GIF files are allowed.";
